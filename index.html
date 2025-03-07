@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia Service</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            var faqItem = answer.parentElement;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                faqItem.classList.add('active');
+            } else {
+                answer.style.display = "none";
+                faqItem.classList.remove('active');
+            }
+        }
+    </script>
+</head>
+<body class="background-gradient">
+    <div class="navbar">
+        <div class="logo">Nostalgia Service</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="staff_in_charge.html">Staff in Charge</a>
+            <a href="staff_who_quitted.html">Staff Who Quitted</a>
+            <a href="memories.html">Memories</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner"></div>
+        <div class="image-container">
+            <img src="photo/photo_2025-03-02_11-55-17.jpg" alt="Nostalgic Memory 1">
+            <img src="photo/photo_2025-03-02_18-38-04.jpg" alt="Nostalgic Memory 2">
+        </div>
+        <h2>We are a service provider dedicated to transforming memorial memories into nostalgic nostalgia</h2>
+        <h2>This service will be passed on from generation to generation by us.</h2>
+        
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item" onclick="toggleAnswer('faq1')">
+                <h3>❓ Where can I find your service?</h3>
+                <p id="faq1"><image class="jpg"></image></p>
+            </div>
+            <div class="faq-item" onclick="toggleAnswer('faq2')">
+                <h3>❓ How do you provide service?</h3>
+                <p id="faq2">We provide service with nostalgia</p>
+            </div>
+            <div class="faq-item" onclick="toggleAnswer('faq3')">
+                <h3>❓ Is the service provided with nostalgia?</h3>
+                <p id="faq3">Yeah!</p>
+            </div>
+            <div class="faq-item" onclick="toggleAnswer('faq4')">
+                <h3>❓ What is your refund policy?</h3>
+                <p id="faq4"><image class="jpg"></image></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

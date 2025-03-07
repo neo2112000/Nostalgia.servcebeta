@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia Service</title>
+    <link rel="stylesheet" href="staff.css"> <!-- Link to the external CSS file -->
+</head>
+<body class="background-gradient">
+    <div class="navbar">
+        <div class="logo">Nostalgia Service</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="staff_in_charge.html">Staff in Charge</a>
+            <a href="staff_who_quitted.html">Staff Who Quitted</a>
+            <a href="memories.html">Memories</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <div class="back-button">
+                <a href="staff_in_charge.html" class="back-link"> Back</a>
+    
+        </div>
+        <div class="image-container">
+            <div class="gallery">
+                <div class="slides">
+                    <div class="slide active"><img src="photo/photo_2025-03-04_11-12-12 (3).jpg" alt="Nostalgic Memory 1"></div>
+                    <div class="slide"><img src="photo/photo_2025-03-04_11-12-12 (4).jpg" alt="Nostalgic Memory 2"></div>
+                    <div class="slide"><img src="photo/photo_2025-03-04_11-12-12 (5).jpg" alt="Nostalgic Memory 3"></div>
+                </div>
+                <div class="indicators">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <div class="photo-info">
+                <p class="Lin Lin">Lin Lin</p>
+                <p class="about">text </p>
+            </div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

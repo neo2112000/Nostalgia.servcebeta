@@ -1,0 +1,264 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Background color */
+    color: #333;
+}
+
+.background-image {
+    background: url('background-image.jpg') center/cover no-repeat; /* Replace with actual image path */
+}
+
+.background-gradient {
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Gradient background */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
+    padding: 15px 10%;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-wrap: wrap; /* For responsive design */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+    flex-direction: row; /* Horizontal menu */
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #007BFF;
+}
+
+.container {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('banner-image.jpg') center/cover no-repeat; /* Replace with actual image path */
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+.faq {
+    margin: 50px auto;
+    width: 60%;
+}
+
+.faq h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item p {
+    margin: 10px 0 0;
+    display: none;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.faq-item.active p {
+    display: block;
+    opacity: 1;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Styles */
+.gallery {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+.staff-in-charge {
+    display: flex;
+    flex-direction: column; /* Vertical alignment */
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start; /* Align to the left */
+}
+
+.staff-member {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 100%; /* Full width */
+    text-align: left; /* Align text to the left */
+}
+
+.staff-member img {
+    width: 150px; /* Fixed width for consistency */
+    height: 150px; /* Fixed height for consistency */
+    border-radius: 50%; /* Ensures the image is circular */
+    object-fit: cover; /* Ensures the image fits well */
+    float: left; /* Float the image to the left */
+    margin-right: 20px; /* Add space between the image and text */
+}
+
+.staff-member h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.staff-member p {
+    font-size: 14px;
+    color: #666;
+    text-align: left; /* Align text to the left */
+}
+
+.staff-member a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.photo-info {
+    text-align: left; /* Align content to the left */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        margin-top: 160px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-member {
+        width: 100%;
+    }
+
+    .staff-member img {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .staff-member h2, .staff-member p {
+        text-align: center;
+    }
+}
